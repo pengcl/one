@@ -5,12 +5,15 @@
 .weui-tabbar__item {
   padding: 8px 0 3px;
   .weui-tabbar__icon {
-    width: 21px;
-    height: 21px;
+    width: 28px;
+    height: 28px;
+  }
+  .weui-tabbar__label{
+    font-size: 0.13rem;
   }
   &.weui-bar__item_on {
     .weui-tabbar__label {
-      color: #F26549;
+      color: #F60;
     }
   }
 }

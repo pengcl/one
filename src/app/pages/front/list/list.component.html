@@ -56,11 +56,18 @@
             src="{{config.prefix.wApi + item.headimage}}" alt=""></div>
           <div [routerLink]="['/front/item',item.spellbuyproductid]" class="weui-media-box__bd">
             <h4 class="weui-media-box__title">(第{{item.productperiod || 1}}期){{item.productname}}</h4>
+            <p class="price">价值：￥{{item.spellbuyprice}}</p>
             <weui-progress [value]="item.bili" [canCancel]="false"></weui-progress>
-            <ul class="weui-media-box__info">
-              <li class="weui-media-box__info__meta"><em>￥{{item.spellbuyprice}}</em></li>
-              <li class="right weui-media-box__info__meta">
-                <span><em>已参与{{item.nowcount}}</em> / 剩余{{item.pluscount}}</span></li>
+            <ul class="bar-li">
+              <li class="bar-01">
+                <em>{{item.nowcount}}</em>已参与
+              </li>
+              <li class="bar-02">
+                <em>{{item.spellbuyprice}}</em>总需人数
+              </li>
+              <li class="bar-03">
+                <em>{{item.pluscount}}</em>剩余
+              </li>
             </ul>
           </div>
           <div (click)="addCart(item.spellbuyproductid,$event)" class="weui-media-box__ft"><img

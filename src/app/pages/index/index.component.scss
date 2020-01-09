@@ -71,6 +71,8 @@ app-infiniteloader {
 }
 
 .new {
+  background:#fff;
+  margin-top: 10px;
   .weui-panel {
     background: none;
     &:before, &:after {
@@ -103,7 +105,6 @@ app-infiniteloader {
             background: #fff;
             margin: 0.03rem;
             padding: 0.1rem;
-            box-shadow: 0 3px 6px 0 rgba(198, 198, 198, 0.20);
             border-radius: 4px;
             .weui-grid__icon {
               width: 0.6rem;
@@ -215,7 +216,7 @@ app-infiniteloader {
       }
     }
     .goods-menu {
-      padding: 0.15rem 0 0.075rem;
+      padding: 0.15rem 0 0;
       &.fixed {
         padding: 0 0 0.075rem;
         width: 100%;
@@ -227,39 +228,40 @@ app-infiniteloader {
       }
       .weui-cell {
         background: #fff;
+        padding: 2px 15px;
       }
       .icon {
         width: 0.22rem;
         display: block;
         margin-left: 0.15rem;
+        vertical-align: middle;
       }
 
       .label {
+        width: 0.6rem;
+        height: 0.2rem;
         font-size: 0.14rem;
-        color: #0F0F0F;
+        color: #333;
         display: block;
         line-height: 1;
         margin: 0 auto;
-        padding: 0.06rem 0.09rem;
-        border-radius: 0.32rem;
+        padding: 0.1rem 0;
         &.curr {
-          color: #fff;
-          background: #F26549;
+          color: #f60;
+          border-bottom: 3px solid #f60;
         }
       }
     }
     .weui-media-box {
-      padding: 0 0.15rem;
+      padding: 0;
       .weui-grids {
-        margin: 0 -0.075rem;
         .weui-grid {
           width: 50%;
-          padding: 0.075rem;
+          background-color: #fff;
           .weui-grid__icon {
             width: auto;
             height: auto;
             background: #fff;
-            box-shadow: 0 3px 6px 0 rgba(198, 198, 198, 0.20);
             border-radius: 4px;
             overflow: hidden;
             position: relative;
@@ -270,51 +272,64 @@ app-infiniteloader {
                 height: 1.25rem;
               }
             }
-            .icon-heart {
-              font-size: 0.17rem;
-              color: #DCDCDC;
+            .discount{
+              width: 0.5rem;
+              height: 0.5rem;
               position: absolute;
               right: 0.1rem;
               top: 0.1rem;
-              &.collected {
-                color: #F43530;
-              }
             }
           }
           .weui-grid__label {
             font-size: 0.13rem;
             color: #0F0F0F;
             line-height: 1;
-            margin-top: 0.1rem;
-            text-align: left;
+            margin: 0.1rem;
           }
 
           weui-progress {
-            margin-top: 0.1rem;
+            margin: 0.1rem;
             display: block;
+            &::ng-deep{
+              .weui-progress__bar{
+                height: 4.6px;
+                .weui-progress__inner-bar{
+                  background-color: #f60;
+                }
+              }
+            }
           }
           .weui-flex {
             margin-top: 0.1rem;
             font-size: 0.12rem;
             line-height: 1;
             &.action {
-              margin-top: 0.15rem;
+              margin: 0.15rem auto;
               .buy {
-                color: #fff;
                 color: #F26549;
                 font-size: 0.14rem;
                 line-height: 1;
                 padding: 0.1rem 0;
                 text-align: center;
-                border-radius: 0.04rem;
                 border: 1px solid #F26549;
+                border-radius: 50px;
+              }
+              .icon-star {
+                font-size: 0.2rem;
+                color: #DCDCDC;
+                margin: 0.1rem;
+                &.collected {
+                  color: #F43530;
+                }
               }
               .cart {
                 width: 0.3rem;
                 display: block;
                 margin: 0 0.05rem 0 0.2rem;
                 flex: unset;
+                border-radius: 50%;
                 align-self: center;
+                background-color: #f60;
                 img {
                   width: 100%;
                   display: block;
@@ -324,6 +339,7 @@ app-infiniteloader {
           }
           .price {
             text-align: left;
+            padding-left: 0.1rem;
             color: #F26549;
           }
           .store {

@@ -33,7 +33,13 @@ ul,li {
 .right {
   float: right;
 }
+.left{
+  float: left;
+}
 
+.clear{
+  clear: both;
+}
 .img-box {
   img {
     display: block;

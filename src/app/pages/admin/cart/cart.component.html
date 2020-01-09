@@ -3,7 +3,7 @@
 
 <div class="carts content-scrollable has-footer">
   <app-msg *ngIf="goods?.length === 0" (event)="onConfirm($event)"
-           [msg]='{title:"",desc:"<em>" + config.webHost.replace("http://","") + "</em>" + " 带给您不一样的购物乐趣～",confirm:"去逛逛",icon:"/assets/images/icons/empty-cart.png"}'></app-msg>
+           [msg]='{title:"",desc:"还没有商品哦～",confirm:"去逛逛",icon:"/assets/images/icons/empty-cart.png"}'></app-msg>
   <div *ngIf="goods?.length > 0" class="weui-panel weui-panel_access">
     <div class="weui-panel__bd">
       <div *ngFor="let item of goods;" class="weui-media-box weui-media-box_appmsg">

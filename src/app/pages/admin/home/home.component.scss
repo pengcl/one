@@ -1,10 +1,95 @@
 .home-content {
-  .userinfo {
-    background-image: linear-gradient(-180deg, #FFB366 0%, #F26549 100%);
+  .userInfo {
+    background: linear-gradient(145deg, #FAEBD7, #f60);
     height: 1.67rem;
+
+    dt {
+      padding: 15px 10px;
+      position: relative;
+      min-height: 60px;
+
+      .userinfo-avatar {
+        float: left;
+        overflow: hidden;
+        margin: 20px 40px;
+      }
+
+      p {
+        padding-top: 10px;
+        display: inline-block;
+        margin-left: 10px;
+        color: #fff;
+
+        cite {
+          display: block;
+
+          &.user_info {
+            margin: 4px 0;
+            font-style: normal;
+          }
+
+          .info {
+            color: #fff;
+            font-size: 0.12rem;
+
+            &:first-child {
+              padding-right: 4px;
+            }
+
+            em {
+              color: #fff;
+              font-size: 0.13rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      width: 100%;
+      height: 0.48rem;
+      line-height: 0.48rem;
+      font-size: 0.16rem;
+      color: #fff;
+
+      li {
+        position: relative;
+        float: left;
+        width: calc(100% / 3);
+        letter-spacing: 1px;
+        background: transparent;
+        box-sizing: border-box;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 1;
+        &:not(:last-child)::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 1px;
+          height: 0.1rem;
+          right: 0;
+          top: 0.2rem;
+          background: rgba(255, 255, 255, .5);
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+        a {
+          display: block;
+          color: #fff;
+          text-align: center;
+          text-shadow: 0 0 3px #666;
+          text-decoration: none;
+        }
+      }
+    }
+
+
     .userinfo-avatar {
       border-radius: 0;
     }
+
     .userinfo-service {
       span {
         display: inline-block;
@@ -15,6 +100,7 @@
         border-radius: 0.02rem;
       }
     }
+
     .sign {
       font-size: 0.13rem;
       line-height: 1;
@@ -28,26 +114,32 @@
       right: 0;
     }
   }
+
   .menu {
     .status {
       background: #fff;
+
       .weui-flex {
         .weui-flex__item {
           text-align: center;
           align-self: center;
           padding: 0.2rem 0;
+
           em, span {
             display: block;
             line-height: 1;
           }
+
           em {
             color: #0F0F0F;
             font-size: 0.15rem;
             margin-bottom: 0.1rem;
           }
+
           span {
             font-size: 0.13rem;
             color: #999;
+
             &.recharge {
               width: 0.7rem;
               height: 0.3rem;
@@ -61,19 +153,40 @@
         }
       }
     }
+
     .menu-list {
-      margin-top: 0.1rem;
+      margin-top: 0.02rem;
       background: #fff;
+
       .weui-grid {
         padding: 0.2rem 0.1rem;
+        width: 50%;
+        height: 48px;
+        .weui-grid__icon{
+          margin-top: -7px;
+          margin-left: 35px;
+          float: left;
+          img{
+            height: 22px;
+            width: 22px;
+          }
+        }
+        p{
+          display: inline-block;
+          float: left;
+          margin-top: -7px;
+          color: #4e4444;
+        }
         &:before, &:after {
           display: block;
         }
+
         &.nrb {
           &:before {
             display: none;
           }
         }
+
         &.nbb {
           &:after {
             display: none;
@@ -85,11 +198,13 @@
 
   .weui-footer {
     margin: 0.2rem 0 0.13rem;
+
     .weui-footer__text {
       font-size: 0.12rem;
       line-height: 1;
       margin-bottom: 0.15rem;
     }
+
     .weui-footer__links {
       .weui-footer__link {
         display: inline-block;
@@ -110,6 +225,7 @@ weui-mask {
   .qr {
     width: 60%;
     margin: 0 auto;
+
     img {
       width: 100%;
       display: block;
@@ -130,4 +246,14 @@ weui-mask {
   box-shadow: 0.015rem 0.015rem 0.03rem 0.03rem rgba(0, 0, 0, 0.2);
   background: #F26549;
   z-index: 9999;
+}
+
+.weui-btn{
+  width: 90%;
+  font-size: 0.17rem;
+  color: #fff;
+}
+
+.weui-btn_primary{
+  background:linear-gradient(145deg, #f60,#FAEBD7)
 }

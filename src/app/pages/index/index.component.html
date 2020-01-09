@@ -169,8 +169,7 @@
                 <div class="img-box">
                   <img src="{{config.prefix.wApi + item.headimage}}" alt="">
                 </div>
-                <span class="icon-heart {{item.incollect ? 'collected' : ''}}"
-                      (click)="item.incollect = item.incollect ? 0 : 1;collect(item,$event)"></span>
+                <span class="discount"><img src="/assets/images/index/bhsc_tb.png"/></span>
               </div>
               <p class="weui-grid__label">(第{{item.productperiod || 1}}期){{item.productname}}</p>
               <div class="weui-flex">
@@ -179,6 +178,8 @@
               </div>
               <weui-progress [value]="item.bili" [canCancel]="false"></weui-progress>
               <div class="action weui-flex">
+                <span class="icon-star {{item.incollect ? 'collected' : ''}}"
+                      (click)="item.incollect = item.incollect ? 0 : 1;collect(item,$event)"></span>
                 <div (click)="addCart(item.spellbuyproductid,$event,true)" class="buy weui-flex__item">立即拼购</div>
                 <div class="cart weui-flex__item">
                   <img (click)="addCart(item.spellbuyproductid,$event)"

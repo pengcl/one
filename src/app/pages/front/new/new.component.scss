@@ -17,23 +17,23 @@
     .weui-media-box {
       margin: 0.15rem;
       padding: 0.1rem;
-      background: rgba(242,99,65,0.10);
+      background: #fff;
       border-radius: 0.02rem;
-      &:before {
-        content: '正在揭晓';
+      border: 2px solid #f60;
+      overflow: hidden;
+      .nowTitle {
         font-size: 0.1rem;
+        background: #f60;
         color: #fff;
-        background: #F26549;
-        border-radius: 0.02rem;
-        left: 0;
-        top: 0;
-        right: auto;
-        height: auto;
-        width: auto !important;
-        padding: 0.02rem 0.05rem;
-        line-height: 1;
-        display: block;
-        transform: scaleY(1);
+        width: 90px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        -webkit-transform: rotate(-45deg);
+        position: absolute;
+        left: -22px;
+        top: 11px;
+        transform: rotate(-45deg);
       }
       .weui-media-box__hd {
         width: 0.75rem;
@@ -64,7 +64,7 @@
             display: block;
             padding: 0.02rem 0.1rem;
             line-height: 0.17rem;
-            background: #4CA6FF;
+            background: #f60;
             color: #fff;
             font-size: 0.13rem;
             border-radius: 0.02rem;
@@ -78,7 +78,13 @@
     }
   }
   .timer {
-    width: 8em;
+    width: 10em;
+    img{
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin: 0 5px;
+    }
   }
 }
 .goods {
@@ -137,10 +143,12 @@
       }
       .weui-media-box__bd {
         .weui-media-box__title {
-          font-size: 0.13rem;
+          font-size: 0.14rem;
           display: -webkit-box;
           white-space: normal;
           line-height: 0.16rem;
+          color: #999;
+          margin: 0.03rem auto;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 2;
           & + .weui-media-box__info {
@@ -149,22 +157,19 @@
         }
         .weui-media-box__info {
           margin-top: 0.15rem;
-          font-size: 0.1rem;
+          font-size: 0.13rem;
           em {
             font-size: 0.12rem;
-            color: #F26549;
+            color: #f60;
             font-style: normal;
             line-height: 0.17rem;
           }
           span {
             display: block;
-            padding: 0 0.1rem;
+            padding: 0;
             line-height: 0.17rem;
-            background: #F5F5F5;
-            color: #3F3F3F;
-            em {
-              font-size: 0.1rem;
-            }
+            background: #fff;
+            color: #bbb;
           }
         }
       }
@@ -181,4 +186,13 @@
 weui-progress {
   display: block;
   margin-top: 0.1rem;
+}
+
+.weui-media-box__info{
+  display: flex;
+  flex-direction: column;
+}
+
+.weui-media-box__info__meta{
+  margin: 0.02rem;
 }

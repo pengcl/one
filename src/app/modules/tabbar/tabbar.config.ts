@@ -25,7 +25,7 @@ export const CONFIG = [
     pagePath: '/front/new',
     iconPath: '/assets/images/icons/tabBar/new.png',
     selectedIconPath: '/assets/images/icons/tabBar/new_on.png',
-    text: '最新',
+    text: '最新揭晓',
     selected: false,
     badge: {
       badge: 0,
@@ -47,7 +47,7 @@ export const CONFIG = [
     pagePath: '/admin/home',
     iconPath: '/assets/images/icons/tabBar/me.png',
     selectedIconPath: '/assets/images/icons/tabBar/me_on.png',
-    text: '我的',
+    text: '个人中心',
     selected: false,
     badge: {
       badge: 0,

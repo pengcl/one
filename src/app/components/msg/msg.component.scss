@@ -5,7 +5,7 @@
 .weui-icon_msg {
   font-size: 0;
   img {
-    width: 1.5rem
+    width: 1.3rem
   }
 }
 
@@ -14,5 +14,15 @@
 }
 
 .weui-msg__desc {
-  font-size: 0.14rem;
+  font-size: 0.16rem;
+  color: #bbb;
+}
+
+.weui-btn{
+  width: 30%;
+  font-size: 0.16rem;
+}
+
+.weui-btn_primary{
+  background:linear-gradient(145deg, #f60,#FAEBD7)
 }

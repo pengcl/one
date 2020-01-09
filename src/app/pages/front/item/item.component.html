@@ -16,23 +16,34 @@
     <div class="weui-panel weui-panel_access">
       <div class="weui-panel__bd">
         <div class="weui-media-box weui-media-box_appmsg">
+          <s></s>
           <div [routerLink]="['/front/member',busLatestlottery.userid]" class="weui-media-box__hd">
             <img class="weui-media-box__thumb" src="{{config.prefix.wApi + busLatestlottery.userface}}">
+            <span>{{busLatestlottery.username}}</span>
           </div>
-          <div class="weui-media-box__bd">
-            <h4 class="weui-media-box__title">获奖者：<em>{{busLatestlottery.username}}</em></h4>
-            <p class="weui-media-box__desc">总共购买：<em>{{busLatestlottery.buynumbercount}}</em>人次</p>
-            <p class="weui-media-box__desc">揭晓时间：{{busLatestlottery.announcedtime}}</p>
-            <p class="weui-media-box__desc">购买时间：{{busLatestlottery.buytime}}</p>
+          <div class="pResultsR">
+            <div class="g-snav">
+              <div class="g-snav-lst">
+                总共购买<br>
+                <dd><b class="orange">{{busLatestlottery.buynumbercount}}</b><br>人次</dd>
+              </div>
+              <div class="g-snav-lst">
+                揭晓时间<br>
+                <dd class="gray"><span>{{busLatestlottery.announcedtime}}</span></dd>
+              </div>
+              <div class="g-snav-lst">
+                购买时间<br>
+                <dd class="gray"><span>{{busLatestlottery.buytime}}</span></dd>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
       <div class="weui-panel__ft">
         <a class="weui-cell weui-cell_access weui-cell_link">
-          <div class="weui-cell__bd">{{productMap?.pk_type === 3 ? '最大元宝' : '幸运码'}}：{{busLatestlottery.randomnumber}}</div>
-          <span *ngIf="productMap?.pk_type !== 3" [routerLink]="['/front/calculation',id]" class="weui-cell__ft">查看结果</span>
-          <span *ngIf="productMap?.pk_type === 3" [routerLink]="['/front/cashback',id]" class="weui-cell__ft">返现用户列表</span>
+          <div class="weui-cell__bd">{{productMap?.pk_type === 3 ? '最大元宝' : '幸运码'}}：<em style="color: #f60">{{busLatestlottery.randomnumber}}</em></div>
+          <span *ngIf="productMap?.pk_type !== 3" [routerLink]="['/front/calculation',id]" class="weui-cell__ft"><a>查看计算结果</a></span>
+          <span *ngIf="productMap?.pk_type === 3" [routerLink]="['/front/cashback',id]" class="weui-cell__ft"><a>返现用户列表</a></span>
         </a>
       </div>
     </div>
@@ -53,31 +64,35 @@
     <span class="tag">{{productImgIndex}}/{{productImgs?.length}}</span>
   </div>
 
-  <div class="prod-title">{{productMap?.producttitle}}</div>
+  <div class="prod-title">{{productMap?.producttitle}}
+    <p class="price">价值：￥{{productMap?.spellbuyprice}}</p>
+  </div>
+
   <div class="prod-progress">
     <weui-progress [value]="(productMap?.spellbuycount / productMap?.user_count) * 100"
                    [canCancel]="false"></weui-progress>
   </div>
-  <div class="prod-status">
-    <div class="weui-flex">
-      <div class="status-price weui-flex__item">
-        价值：￥{{productMap?.spellbuyprice}}
-      </div>
-      <div class="status-progress weui-flex__item">
-        <span>
-          <em>已参与{{productMap?.spellbuycount}}</em>
-          <span>／剩余{{productMap?.user_count - productMap?.spellbuycount}}</span>
-        </span>
-      </div>
-    </div>
+
+  <div class="prod-status ">
+    <ul class="bar-li">
+      <li class="bar-01">
+        <em>{{productMap?.spellbuycount}}</em>已参与
+      </li>
+      <li class="bar-02">
+        <em>{{productMap?.spellbuyprice}}</em>总需人数
+      </li>
+      <li class="bar-03">
+        <em>{{productMap?.user_count - productMap?.spellbuycount}}</em>剩余
+      </li>
+    </ul>
+    <div class="clear"></div>
     <button *ngIf="productMap?.spstatus === 1 || productMap?.spstatus === 2" weui-button [disabled]="disabled"
             [weui-loading]="loading"
-            [weui-type]="'default'">
+            [weui-type]="'default'" style="margin-top: 5px">
       <span *ngIf="productMap?.spstatus === 2">{{statusText}}</span>
-      <span *ngIf="productMap?.spstatus === 1">已经揭晓</span>
+      <span *ngIf="productMap?.spstatus === 1">本期已揭晓</span>
     </button>
   </div>
-
   <div *ngIf="productMap?.pk_type !== 3" class="prod-intro">
     <div class="txt weui-flex">
       <div class="title weui-flex__item">玩法简介</div>
@@ -165,11 +180,12 @@
     <div class="weui-panel weui-panel_access">
       <div class="weui-panel__bd">
         <div class="weui-media-box weui-media-box_appmsg">
+          <s></s>
           <div [routerLink]="['/front/member',lastBusLatestlottery.userid]" class="weui-media-box__hd">
             <img class="weui-media-box__thumb" src="{{config.prefix.wApi + lastBusLatestlottery.userface}}">
           </div>
           <div class="weui-media-box__bd">
-            <h4 class="weui-media-box__title">获奖者：<em>{{lastBusLatestlottery.username}}</em></h4>
+            <h4 class="weui-media-box__title"><em>{{lastBusLatestlottery.username}}</em></h4>
             <p class="weui-media-box__desc">总共购买：<em>{{lastBusLatestlottery.buynumbercount}}</em>人次</p>
             <p class="weui-media-box__desc">揭晓时间：{{lastBusLatestlottery.announcedtime}}</p>
             <p class="weui-media-box__desc">购买时间：{{lastBusLatestlottery.buytime}}</p>
