@@ -3,7 +3,7 @@
 
 <div *ngIf="share" class="shares content-scrollable">
   <app-msg *ngIf="share.shareList.length === 0" (event)="onCancel($event)"
-           [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+           [msg]='{title:"",desc:"暂无记录",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
   <div *ngIf="share.shareList.length > 0" class="weui-panel">
     <div class="weui-panel__bd">
       <div *ngFor="let item of share.shareList;" class="weui-media-box">

@@ -1,5 +1,5 @@
 .collects {
-  background: #fff;
+  background: rgb(244, 244, 244);
   overflow: visible;
   &.has-footer {
     &:after {
@@ -33,7 +33,7 @@
 
 .btns-group {
   background: #fff;
-  bottom: 53px;
+  bottom: 60px;
   .nav-group {
     width: 50%;
     display: flex;

@@ -1,6 +1,13 @@
 weui-infiniteloader {
   padding-bottom: 53px;
 }
+app-infiniteloader{
+  &::ng-deep{
+    .app-infiniteloader__content{
+      background: #fff;
+    }
+  }
+}
 .content {
   background: #F7F7F7;
   table {

@@ -5,7 +5,7 @@
   <app-infiniteloader (loadmore)="onLoadMore($event)" #comp>
     <weui-tab heading="消费明细" (select)="onSelect(1)">
       <app-msg *ngIf="flow.list.length === 0 && tab === 1" (event)="onCancel($event)"
-               [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+               [msg]='{title:"",desc:"暂无记录",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
       <div *ngIf="flow.list.length > 0 && tab === 1" class="content">
         <table cellpadding="0" cellspacing="0" border="0">
           <thead>
@@ -27,7 +27,7 @@
     </weui-tab>
     <weui-tab heading="充值明细" (select)="onSelect(0)">
       <app-msg *ngIf="flow.list.length === 0 && tab === 0" (event)="onCancel($event)"
-               [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+               [msg]='{title:"",desc:"暂无记录",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
       <div *ngIf="flow.list.length > 0 && tab === 0" class="content">
         <table cellpadding="0" cellspacing="0" border="0">
           <thead>

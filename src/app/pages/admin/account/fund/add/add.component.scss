@@ -1,4 +1,5 @@
 .account-fund {
+  background: #fff;
   .status {
     background-image: linear-gradient(-180deg, #FFB366 0%, #F26549 100%);
     border-radius: 0.04rem;
@@ -25,17 +26,18 @@
   .weui-grids {
     margin: 0 0.1rem;
     .weui-grid__box {
+      color: #959595;
       margin: 0.05rem;
-      border: 1px solid #ccc;
+      border: 1px solid #f2f2f2;
       text-align: center;
-      font-size: 0.15rem;
-      padding: 0.2rem 0;
+      font-size: 0.12rem;
+      padding: 0.1rem 0;
       border-radius: 0.04rem;
       box-sizing: border-box;
       line-height: 1;
       &.curr {
-        border: 1px solid #F26341;
-        color: #F26341;
+        background: linear-gradient(145deg, #f60,#FAEBD7);
+        color: #fff;
       }
     }
   }
@@ -50,6 +52,10 @@
 
   .weui-btn-area {
     margin: 0.35rem 0.15rem;
+    .weui-btn_primary{
+      background: linear-gradient(145deg, #f60,#FAEBD7);
+      font-size: 0.16rem;
+    }
   }
 }
 

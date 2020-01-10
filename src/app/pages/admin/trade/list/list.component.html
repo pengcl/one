@@ -5,7 +5,7 @@
   <app-infiniteloader (loadmore)="onLoadMore($event)" class="h-footer" #comp>
     <weui-tab heading="正在进行" (select)="onSelect('ING')">
       <app-msg *ngIf="trade.list.length === 0 && tab === 'ING'" (event)="onCancel($event)"
-               [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+               [msg]='{title:"",desc:"暂无记录",cancel:"返回",icon:"/assets/images/icons/empty-cart.png"}'></app-msg>
       <div *ngIf="trade.list.length > 0 && tab === 'ING'" class="content">
         <div class="weui-panel weui-panel_access">
           <div class="weui-panel__bd">
@@ -34,7 +34,7 @@
     </weui-tab>
     <weui-tab heading="已经揭晓" (select)="onSelect('OVER')">
       <app-msg *ngIf="trade.list.length === 0 && tab === 'OVER'" (event)="onCancel($event)"
-               [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+               [msg]='{title:"",desc:"暂无记录",cancel:"返回",icon:"/assets/images/icons/empty-cart.png"}'></app-msg>
       <div *ngIf="trade.list.length > 0 && tab === 'OVER'" class="content">
         <div class="weui-panel weui-panel_access">
           <div class="weui-panel__bd">

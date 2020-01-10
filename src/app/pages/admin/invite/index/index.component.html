@@ -10,13 +10,13 @@
     <div *ngIf="invite" class="inv-status">
       <div class="status-box">
         <div class="weui-flex">
-          <div class="weui-flex__item">
-            <em>{{invite.inviteCount}}</em>
-            <span>邀请好友</span>
-          </div>
           <div routerLink="/admin/commissions" class="weui-flex__item">
-            <em>￥{{userInfo?.commissionbalance}}</em>
             <span>佣金金额</span>
+            <em>￥{{userInfo?.commissionbalance}}</em>
+          </div>
+          <div class="weui-flex__item">
+            <span>邀请好友</span>
+            <em>{{invite.inviteCount}}</em>
           </div>
         </div>
       </div>

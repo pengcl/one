@@ -3,7 +3,7 @@
 
 <app-infiniteloader *ngIf="purchased" (loadmore)="onLoadMore($event)" #comp>
   <app-msg *ngIf="purchased.list.length === 0" (event)="onCancel($event)"
-           [msg]='{title:"",desc:"您还没有任何记录!~～",cancel:"返回",icon:"/assets/images/icons/empty.png"}'></app-msg>
+           [msg]='{title:"",desc:"暂无记录",icon:"/assets/images/icons/empty-cart.png"}'></app-msg>
   <div *ngFor="let item of purchased.list" class="weui-panel weui-panel_access">
     <div class="weui-panel__bd">
       <div class="purchased-item">
